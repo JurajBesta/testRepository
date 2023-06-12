@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <script src="marked-master\marked.min.js"></script>
+</head>
+
+<body>
+    <h1>This is a Heading</h1>
+    <p>This is a paragraph.</p>
+
+    <script>
+        // Use an AJAX request to read the Markdown file
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'main.md', true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var markdownContent = xhr.responseText;
+
+                    // Convert the Markdown content to HTML using the marked library
+                    var htmlContent = marked(markdownContent);
+
+                    // Update the content of the target div with the rendered HTML
+                    document.getElementById('markdown-container').innerHTML = htmlContent;
+                }
+            };
+            xhr.send();
+    </script>
+    <div id="content"></div>
+</body>
+
+</html>
