@@ -96,10 +96,9 @@
                 .then(text => {
                   // Target element to display the rendered Markdown
                   document.getElementById('renderer').innerHTML = marked.parse(text);
-                  alert("ahoj");
                 })
                 .catch(error => {
-                  alert("chyba");
+                  alert("something went and .md is not loaded.");
                 });
             }
         </script>
