@@ -1,0 +1,25 @@
+/* side column */
+#framework-name-header {
+    font-weight: 600;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul.layer {
+    padding-left: var(--custom-padding, 0);
+    list-style: none;
+}
+
+/* article settings */
+.wide-container {
+    max-width: 1550px !important;
+}
+
+/* footer additional */
+.footer-link-logo {
+    padding-top: 0.2rem;
+    max-width: 24px;
+    opacity: 0.8;
+}
