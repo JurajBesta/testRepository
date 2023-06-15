@@ -104,10 +104,12 @@
                 });
             }
 
-            alert("href: " + window.location.href);
+            /*alert("href: " + window.location.href);
             alert("hostname: " + window.location.hostname);
             alert("pathname: " + window.location.pathname);
-            alert("protocol: " + window.location.protocol);
+            alert("protocol: " + window.location.protocol);*/
+
+            document.getElementById('demo').innerHTML = '<a href="' + window.location.pathname + "?fileName=testFile.md" + '">Click here</a>';
         </script>
     </div>
 </body>
